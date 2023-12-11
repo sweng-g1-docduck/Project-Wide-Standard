@@ -59,7 +59,22 @@
 		</xs:attribute>
     </xs:attributeGroup>
 
-    <xs:attributeGroup name="text">
+    <xs:attributeGroup name="textBox">
+        <xs:attribute name="width" type="xs:decimal" use="required">
+            <xs:annotation>
+                <xs:documentation> The width of the text box. </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="height" type="xs:decimal" use="required">
+            <xs:annotation>
+                <xs:documentation> The height of the text box. </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="text" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation> The text to be displayed in the text box. </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
         <xs:attribute name="font" type="xs:string" use="required">
 			<xs:annotation>
                 <xs:documentation> The font to use for displaying the text. The application should provide the appropriate font.
@@ -251,12 +266,13 @@
 					</xs:attribute>
                 </xs:complexType>
             </xs:element>
-            <xs:element name="text" minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="textBox" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation> This element carries information about a block of text to be displayed on the slide. </xs:documentation>
+					<xs:documentation> This element carries information about a block of text to be displayed on the slide. 
+                                       The block of text is displayed within a text box which has a position and size. </xs:documentation>
 				</xs:annotation>
                 <xs:complexType>
-                    <xs:attributeGroup ref="text"/>
+                    <xs:attributeGroup ref="textBox"/>
                 </xs:complexType>
             </xs:element>
             <xs:element name="shape" minOccurs="0" maxOccurs="unbounded">
