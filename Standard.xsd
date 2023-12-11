@@ -82,7 +82,13 @@
                 <xs:documentation> The spacing between letters to adjust the visual density of the text. </xs:documentation>
             </xs:annotation>
 		</xs:attribute>
+        <xs:attribute name="lineSpacing" type="xs:decimal" use="optional" default="1.5">
+			<xs:annotation>
+                <xs:documentation> The spacing between lines to adjust the visual density of the text. </xs:documentation>
+            </xs:annotation>
+		</xs:attribute>
 		<xs:attributeGroup ref="position"/>
+        <xs:attributeGroup ref="border"/>
 	</xs:attributeGroup>
 
     <xs:attributeGroup name="audio">
@@ -151,7 +157,8 @@
                 <xs:documentation> The scale of the video; the size it takes up in the given space on the slide. </xs:documentation>
             </xs:annotation>
 		</xs:attribute>
-		<xs:attributeGroup ref="position"/>		
+		<xs:attributeGroup ref="position"/>
+        <xs:attributeGroup ref="border"/>		
     </xs:attributeGroup>
 
     <xs:attributeGroup name="image">
@@ -171,6 +178,7 @@
             </xs:annotation>
 		</xs:attribute>
 		<xs:attributeGroup ref="position"/>
+        <xs:attributeGroup ref="border"/>
     </xs:attributeGroup>
 
     <xs:attributeGroup name="shape">
@@ -195,7 +203,21 @@
             </xs:annotation>
 		</xs:attribute>
 		<xs:attributeGroup ref="position"/>
+        <xs:attributeGroup ref="border"/>
     </xs:attributeGroup>  
+    
+    <xs:attributeGroup name="border">
+        <xs:attribute name="borderWidth" type="xs:decimal" use="optional">
+            <xs:annotation>
+                <xs:documentation> Width of the border around an element or shape. </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="borderColour" type="colourType" use="optional">
+            <xs:annotation>
+                <xs:documentation> The colour of the border. </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:attributeGroup>
     
     <xs:attributeGroup name="info">
         <xs:attribute name="author" type="xs:string" use="required">
@@ -229,20 +251,28 @@
 					</xs:attribute>
                 </xs:complexType>
             </xs:element>
-            <xs:element name="image" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation> This element carries information about an image to be displayed on the slide. </xs:documentation>
-				</xs:annotation>
-                <xs:complexType>
-                    <xs:attributeGroup ref="image"/>
-                </xs:complexType>
-            </xs:element>
             <xs:element name="text" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation> This element carries information about a block of text to be displayed on the slide. </xs:documentation>
 				</xs:annotation>
                 <xs:complexType>
                     <xs:attributeGroup ref="text"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="shape" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation> This element carries information about a shape to be displayed on the slide. </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:attributeGroup ref="shape"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="image" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation> This element carries information about an image to be displayed on the slide. </xs:documentation>
+				</xs:annotation>
+                <xs:complexType>
+                    <xs:attributeGroup ref="image"/>
                 </xs:complexType>
             </xs:element>
             <xs:element name="audio" minOccurs="0" maxOccurs="unbounded">
@@ -277,6 +307,14 @@
 						<xs:documentation> This element carries information about the slides to be displayed on the slideshow/presentation. </xs:documentation>
 					</xs:annotation>
 				</xs:element>
+                <xs:element name="info" minOccurs="1" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation> This element carries information about the slide. </xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:attributeGroup ref="info"/>
+                    </xs:complexType>
+                </xs:element>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
