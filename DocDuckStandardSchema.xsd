@@ -337,7 +337,7 @@
         <!--contains colour attribute group-->
         <xs:attribute name="colour" type="colourType" use="required" default="#ffffffff">
 			<xs:annotation>
-                <xs:documentation> The colour of the text to be displayed. </xs:documentation>
+                <xs:documentation> The colour of the background of the slide. </xs:documentation>
             </xs:annotation>
 		</xs:attribute>
     </xs:attributeGroup>
