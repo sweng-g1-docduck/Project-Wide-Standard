@@ -348,6 +348,11 @@
                 <xs:documentation> The default name that appears at the top of the dropdown list. </xs:documentation>
             </xs:annotation>
 		</xs:attribute>
+        <xs:attribute name="values" type="valuelist" use="required">
+			<xs:annotation>
+                <xs:documentation> The values that appear as options within the dropdown list. </xs:documentation>
+            </xs:annotation>
+		</xs:attribute>
         <xs:attribute name="width" type="xs:int" use="optional">
 			<xs:annotation>
                 <xs:documentation> The width of the button to appear on the screen. </xs:documentation>
@@ -381,7 +386,6 @@
             </xs:annotation>
 		</xs:attribute>
         <xs:attributeGroup ref="position"/>
-        <xs:attributeGroup ref="valuelist"/>
     </xs:attributeGroup>
 
     <xs:attributeGroup name="textField">
