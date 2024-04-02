@@ -271,12 +271,12 @@
                 <xs:documentation> The eventID of the event you want the button to do when clicked. </xs:documentation>
             </xs:annotation>
 		</xs:attribute>
-        <xs:attribute name="width" type="xs:int" use="optional" default="100">
+        <xs:attribute name="width" type="xs:decimal" use="optional" default="100">
 			<xs:annotation>
                 <xs:documentation> The width of the button to appear on the screen. </xs:documentation>
             </xs:annotation>
 		</xs:attribute>
-        <xs:attribute name="height" type="xs:int" use="optional" default="50">
+        <xs:attribute name="height" type="xs:decimal" use="optional" default="50">
 			<xs:annotation>
                 <xs:documentation> The height of the button to appear on the screen. </xs:documentation>
             </xs:annotation>
