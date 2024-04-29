@@ -1,19 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- <slideshow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DocDuckStandardSchema_WithData.xsd"> -->
-<!--   <slide> -->
-<!--         <id id="loginPage"/> -->
-<!--         <image imageURL="/docducklogo.png" imageScale="500" xCoordinate="390" yCoordinate="80"/> -->
-<!--         <button cornerRadius="10" width="200" height="40" text="Sign Up for Business" eventID="signup" font="Arial" fontSize="14" fontColour="#FFFFFFff" backgroundColour="#fbb12eff" clickColour="#ffffffff" hoverColour="#ff8c00ff" xCoordinate="495" yCoordinate="540"/> -->
-<!--         <button cornerRadius="10" width="80" height="40" text="Sign In" eventID="signin" font="Arial" fontSize="14" fontColour="#FFFFFFff" backgroundColour="#007bffff" hoverColour="#0056b3ff" xCoordinate="700" yCoordinate="540"/> -->
-<!--         <hyperlink text="Forgot Password?" font="Arial" fontSize="12" fontColour="#ffffffff" xCoordinate="585" yCoordinate="500" URL="https://docduck.000webhostapp.com"/> -->
-<!--         <backgroundColour colour="#1f5398ff"/> -->
-<!--         <textField password="false" cornerRadius="10" width="300" height="40" promptText="Username" font="Arial" fontSize="14" fontColour="#000000ff" xCoordinate="490" yCoordinate="400"/> -->
-<!--         <textField password="true" cornerRadius="10" passwordButton="true" width="300" height="40" promptText="Password" font="Arial" fontSize="14" fontColour="#000000ff" xCoordinate="490" yCoordinate="450"/> -->
-<!--     </slide> -->
-<!--     <info author="." dateCreated="2024-03-12T12:00:00" comment="Pages for DocDuck Maintenance Tool"/> -->
-<!-- </slideshow> -->
-
-
 <docduckData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DocDuckStandardSchema_WithData.xsd">
   <machineData>
     <machine id="1">
@@ -41,7 +26,7 @@
   
   <userData>
     <user id="1">
-      <name>James Stephenson</name>
+      <name>James Stevenson</name>
       <username>js2140</username>
       <password>js12345</password>
       <email>js2140@york.ac.uk</email>
