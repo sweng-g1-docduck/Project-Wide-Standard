@@ -22,6 +22,27 @@
         </component>
       </components>
     </machine>
+    <machine id="2">
+      <name>Computer 1</name>
+      <components>
+        <component id="1">
+          <name>Motherboard</name>
+          <quantity>1</quantity>
+          <parts>
+            <part id="1">
+              <name>CPU</name>
+              <serialNumber>39df84kdu4</serialNumber>
+              <quantity>1</quantity>
+            </part>
+            <part id="2">
+              <name>GPU</name>
+              <serialNumber>4k38fu3746</serialNumber>
+              <quantity>1</quantity>
+            </part>
+          </parts>
+        </component>
+      </components>
+    </machine>
   </machineData>
   
   <userData>
