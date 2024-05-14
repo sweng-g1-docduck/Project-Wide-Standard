@@ -694,6 +694,15 @@
     </xs:restriction>
   </xs:simpleType>
   
+  <xs:simpleType name="roleType">
+    <xs:annotation>
+      <xs:documentation> The types of user roles. </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="OPERATOR|ENGINEER|ADMIN" />
+    </xs:restriction>
+  </xs:simpleType>
+  
   <xs:complexType name="partInfo">
     <xs:sequence>
       <xs:element name="part" minOccurs="0" maxOccurs="unbounded">
@@ -763,7 +772,7 @@
             <xs:element name="username" type="xs:string"/>
             <xs:element name="password" type="xs:string"/>
             <xs:element name="email" type="xs:string"/>
-            <xs:element name="role" type="xs:string"/>
+            <xs:element name="role" type="roleType"/>
           </xs:sequence>
           <xs:attribute type="xs:int" name="id" use="optional"/>
         </xs:complexType>
