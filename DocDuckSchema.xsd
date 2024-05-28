@@ -690,7 +690,7 @@
       <xs:documentation> The status for a machine. </xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:string">
-      <xs:pattern value="ONLINE|MAINTAINANCE|OFFLINE" />
+      <xs:pattern value="ONLINE|MAINTENANCE|OFFLINE" />
     </xs:restriction>
   </xs:simpleType>
   
@@ -754,8 +754,6 @@
             <xs:element name="imageRef" type="xs:string"/>
             <xs:element name="datasheetRef" type="xs:string"/>
             <xs:element name="purchaseLocationRef" type="xs:string"/>
-            <xs:element name="components" type="componentInfo"/>
-            <xs:element name="parts" type="partInfo"/>
           </xs:sequence>
           <xs:attribute type="xs:int" name="id" use="optional"/>
         </xs:complexType>
@@ -788,7 +786,7 @@
             <xs:element name="title" type="xs:string"/>
             <xs:element name="description" type="xs:string"/>
             <xs:element name="media" type="xs:string"/>
-            <xs:element name="machineID" type="xs:string"/>
+            <xs:element name="machineID" type="xs:int"/>
             <xs:element name="userID" type="xs:int"/>
           </xs:sequence>
           <xs:attribute type="xs:int" name="id" use="optional"/>
